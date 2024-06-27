@@ -75,7 +75,7 @@ def main(csv_file, email_title, output_name):
             table.append(tr)
 
         # Guardar el HTML modificado para revisión
-        with open(f'outputs/{output_name}', 'w', encoding='utf-8') as file:
+        with open(output_name, 'w', encoding='utf-8') as file:
             file.write(soup.prettify(formatter="html"))
     else:
         print("No se encontró la tabla con id 'tabla-destino'")
